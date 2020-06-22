@@ -11,16 +11,16 @@ I also replaced deprecated methods.
 ## Getting started
 ### Installation
 * Install Node.js and npm
-* Install the static web server for Node.js: `sudo npm install -g node-static`
+* Install the static web server for Node.js: `npm install -g node-static`
 * Install needed dependencies:
 	* `npm install ws`
 	* `npm install fs`
 	* `npm install https`
 	* `npm install http-server`
 	* In the `textchat` folder, `npm install bootstrap`
-* Generate a `key.pem` and `cert.pem` for both the server and the client:
+* Generate a `key.pem` and `cert.pem` for both the server and the client (you need to have openssl installed):
 	* `openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem`
-	* Make sure you have a `key.pem` and `cert.pem` in both `server` and `textchat`
+	* Make sure you have a `key.pem` and `cert.pem` in both `server` and `textchat` folders
 ### Running the server and the client
 #### Server
 * `cd server`
@@ -38,11 +38,11 @@ You will also need to navigate to https://localhost:9000 and also type `thisisun
 Once you the page has loaded, type your desired username and click on the `Login` button.
 Open another tab, and login with another username.
 
-Then, in one tab, type the username of the other tab and click on the `Connect` button. If you authorized your browser to access your camera, you should see two video feeds. You can also chat via text message.
+Then, in one tab, type the username of the other tab and click on the `Connect` button. If you authorized your browser to access your camera, you should see two video feeds. You can also chat via text messages.
 
 ## Known bugs
 * If you hang, you cannot connect to anyone anymore. You will need to relogin (start from the first page) again.
 * Sometimes, the websocket server crashes when trying to login.
 
 ## Why do you need to run the application over HTTPS?
-For security reasons, browsers do not allow a website to access the camera/microphone of a user if the website is not hosted over HTTPS.
+For security reasons, browsers do not allow a website to access the camera/microphone of a user if the website is not accessed over HTTPS.
