@@ -33,7 +33,7 @@ I also replaced deprecated methods.
 You can access the app by navigating to https://localhost:8080. 
 If you generated the SSL certificates with the above command, you will most likely get a warning on your browser. If you are using Chrome, type `thisisunsafe` to access the website.
 
-You will also need to navigate to https://localhost:9000 and also type `thisisunsafe`. This is necessary because the application needs to communicate with the websocket server via a secured connection. Please note that this page won't load, so as soon as you got through the warning, you can close the tab.
+You will also need to navigate to https://localhost:9090 and also type `thisisunsafe`. This is necessary because the application needs to communicate with the websocket server via a secured connection. Please note that this page won't load, so as soon as you got through the warning, you can close the tab.
 #### Use
 Once you the page has loaded, type your desired username and click on the `Login` button.
 Open another tab, and login with another username.
